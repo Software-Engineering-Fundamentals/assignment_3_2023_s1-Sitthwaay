@@ -1,11 +1,7 @@
-public class TraineeAcc {
-    String name;
-    String id;
-    String password;
+public class TraineeAcc extends Account{
+
     public TraineeAcc(String name,String id,String password){
-        this.name = name;
-        this.id = id;
-        this.password = password;
+        super(name,id,password);
     }
     public static void main(String[] args) throws Exception {
         
