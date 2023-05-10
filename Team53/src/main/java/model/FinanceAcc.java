@@ -3,10 +3,6 @@ public class FinanceAcc extends Account{
     public FinanceAcc(String name,String id,String password){
         super(name,id,password);
     }
-    public static void main(String[] args) throws Exception {
-        
-        System.out.println("hello user");
-    }
      
     public boolean receiveReq(String course,String stuId){
         System.out.println("Manager check database to search for first session time of "+course);
