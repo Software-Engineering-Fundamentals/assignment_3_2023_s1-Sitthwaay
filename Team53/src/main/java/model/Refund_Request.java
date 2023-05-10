@@ -5,7 +5,9 @@ public class Refund_Request {
         this.course_name = course_name;
         this.id = id;
     }
-    public void request_refund(){
-        System.out.println("sent "+course_name+" and " + id + "to finance mananger");
+    public boolean request_refund(){
+        FinanceAcc financeManager = new FinanceAcc("m_name", "m_id","m_pw");
+        boolean result = financeManager.receiveReq(this.course_name,this.id);
+        return result;
     }
 }
