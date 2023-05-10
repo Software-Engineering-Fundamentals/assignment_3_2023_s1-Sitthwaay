@@ -5,7 +5,7 @@ public class FinanceAcc extends Account{
     }
      
     public boolean receiveReq(String course,String stuId){
-        System.out.println("Manager check database to search for first session time of "+course);
+        System.out.println("Finance Manager receive request and check database to search for first session time of "+course);
         int firstSessionTime = 100; //first session time result from database
         int timenow = 75; //current time
         int remainTime = firstSessionTime - timenow;
