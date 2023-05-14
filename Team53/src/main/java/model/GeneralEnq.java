@@ -10,14 +10,16 @@ public abstract class GeneralEnq {
         this.id = id;
         this.content = content;
     }
-    public void lodge_enquiry(){
-
-        System.out.println("save"+content+"into database");
-
-        //manager view enquiry and response
-        //manager get this enquiry from database with get_enquiry()
-        ManagerAcc manager = new ManagerAcc("manager_name","manager_id","manager_pw");
-        
-        response = manager.add_response(content);
+    public void add_response(String response){
+        this.response = response;
+    }
+    public String get_response(){
+        return response;
+    }
+    public String get_id(){
+        return id;
+    }
+    public String get_content(){
+        return content;
     }
 }
