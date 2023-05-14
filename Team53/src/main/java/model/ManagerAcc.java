@@ -15,6 +15,6 @@ public class ManagerAcc extends Account{
         enquiry.add_response(response);
 
         // response is saved to database
-        System.out.println("response saved to database");
+        System.out.println("enquiry with response saved to database");
     }
 }

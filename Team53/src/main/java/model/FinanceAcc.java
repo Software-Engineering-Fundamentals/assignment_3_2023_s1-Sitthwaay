@@ -22,6 +22,9 @@ public class FinanceAcc extends Account{
         }else{
             rr.reject_refund();
         }
+
+        // save to database
+        System.out.println("save resolved refund request to database");
     }
     
 }
