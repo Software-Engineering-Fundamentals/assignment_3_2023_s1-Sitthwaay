@@ -4,18 +4,19 @@ public class FinanceAcc extends Account{
         super(name,id,password);
     }
      
-    public boolean receiveReq(String course,String stuId){
+    public void resolve_refund_request(){
+        // get from database
+        Refund_Request rr = new Refund_Request("name_of_course", "trainee_id");
 
-        System.out.println("Finance Manager receive request and check database to search for first session time of "+course);
-        
+        // finance manager resolves the refund request
         int firstSessionTime = 100; //first session time result from database
         int timenow = 75; //current time
         int remainTime = firstSessionTime - timenow;
 
         if(remainTime > 24){ //if has more than 24 hour left, refund success
-            return true;
+            rr.approve_refund();
         }else{
-            return false;
+            rr.reject_refund();
         }
     }
     

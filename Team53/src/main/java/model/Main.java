@@ -1,11 +1,16 @@
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        //request refund
+        // trainee requests refund
         TraineeAcc trainee = new TraineeAcc("user_Name","user_Id","user_Password");
         trainee.request_refund();
+        // finance manager resolves refund request
+        FinanceAcc finance = new FinanceAcc("finance_Name","finance_Id","finance_Password");
+        finance.resolve_refund_request();
+        // trainee views refund status
+        System.out.println(trainee.view_refund_status("request_ID"));
         
-         //lodge enquiry
+         //lodge enquiry 
         Enquiry enq = new Enquiry(trainee.id, "__Trainee write this content__");
         enq.lodge_enquiry();
         //view response
