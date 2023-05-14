@@ -4,7 +4,7 @@ public class ManagerAcc extends Account{
         super(name,id,password);
     }
 
-    public String respondEnq(String content){
+    public String add_response(String content){
         System.out.println("Manager read the "+content);
         String response = "__This is the manager response__";
         return response;
